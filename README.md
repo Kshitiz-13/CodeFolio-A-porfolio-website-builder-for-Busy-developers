@@ -15,3 +15,9 @@
 ## Here you can edit your details any time you want and they will updated in your portfolio website.
 ## You can create,read,update,delete your projects and skills as you grow with time
 ![image](https://user-images.githubusercontent.com/55119355/172822424-f3db9473-647a-4de2-8611-b1acc75e178c.png)
+
+
+# Porfolio that you can share with anyone ->
+
+
+![image](https://user-images.githubusercontent.com/55119355/172823114-d00988ad-3f86-4933-bf59-2895ebf1a627.png)
