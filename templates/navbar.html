@@ -1,0 +1,30 @@
+<header id="header">
+  <nav id="header__main-nav">
+    <div class="header__main-nav--hamburger">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+    </div>
+    <!-- <div class="name">KSHITIZ</div> -->
+    <ul class="header__main-nav--links">
+      <li class="header__menu__item">
+        <a href="{% url 'home' %}">Home </a>
+      </li>
+      {% if request.user.is_authenticated %}
+      <li class="header__menu__item">
+        <a href="{% url 'user-profile' request.user.profile.id %}" target="_blank">My Porfolio</a>
+      </li>
+      <li class="header__menu__item">
+        <a href="{% url 'account' %}">Account</a>
+      </li>
+      <li class="header__menu__item">
+        <a href="{% url 'logout' %}" class="header__menu__item border-box">Logout</a>
+      </li>
+      {% else %}
+      <li class="header__menu__item">
+        <a href="{% url 'login' %}" class="header__menu__item border-box">Login/Sign Up</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,263 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{profile.name}}</title>
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- css -->
+  <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css" />
+
+  <link rel="stylesheet" href="{% static 'styles/portfolio.css' %}" />
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="nav" id="nav">
+    <div class="nav-center">
+      <!-- nav header -->
+      <div class="nav-header">
+        <button class="nav-btn" id="nav-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <!-- nav links -->
+      <ul class="nav-links">
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#projects">projects</a></li>
+
+      </ul>
+    </div>
+  </nav>
+  <!-- end of navbar -->
+  <!-- sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div>
+      <button id="close-btn" class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul class="sidebar-links">
+        <li><a href="#home">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#projects">projects</a></li>
+      </ul>
+      <ul class="social-icons">
+
+        <!-- single item -->
+        <li>
+          <a href="{{profile.social_github}}" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <!-- end of single item -->
+        <!-- single item -->
+        <li>
+          <a href="{{profile.social_linkedin}}" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+        <!-- end of single item -->
+        <!-- single item -->
+        <li>
+          <a href="{{profile.social_twitter}}" class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <!-- end of single item -->
+        <!-- single item -->
+        <li>
+          <a href="{{profile.social_youtube}}" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+        <!-- end of single item -->
+        <!-- single item -->
+        <li>
+          <a href="{{profile.social_website}}" class="social-icon">
+            <i class="fa-solid fa-laptop-code"></i>
+          </a>
+        </li>
+        <!-- end of single item -->
+      </ul>
+    </div>
+  </aside>
+  <!-- end of sidebar -->
+  <!-- header -->
+  <header class="hero" id="home">
+    <div class="section-center hero-center">
+      <article class="hero-info">
+        <div class="underline"></div>
+        <h1>i'm {{profile.name}}</h1>
+        <h4>{{profile.short_intro}}</h4>
+        <a href="mailto:{{profile.email}}" class="btn hero-btn">hire me</a>
+        <ul class="social-icons hero-icons">
+          <!-- single item -->
+          <li>
+            <a href="{{profile.social_github}}" class="social-icon">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <!-- end of single item -->
+          <!-- single item -->
+          <li>
+            <a href="{{profile.social_linkedin}}" class="social-icon">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <!-- end of single item -->
+          <!-- single item -->
+          <li>
+            <a href="{{profile.social_twitter}}" class="social-icon">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <!-- end of single item -->
+          <!-- single item -->
+          <li>
+            <a href="{{profile.social_youtube}}" class="social-icon">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <!-- end of single item -->
+          <!-- single item -->
+          <li>
+            <a href="{{profile.social_website}}" class="social-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </a>
+          </li>
+          <!-- end of single item -->
+        </ul>
+      </article>
+      <article class="hero-img">
+        <img src="{{profile.imageURL}}" class="hero-photo" alt="john doe" />
+      </article>
+    </div>
+  </header>
+  <!-- end of header -->
+  <!-- about -->
+  <section class="section about" id="about">
+    <div class="section-center about-center">
+      <!-- about img -->
+      <article class="about-img">
+        <img src="{{profile.imageURL}}" class="hero-photo" alt="" />
+      </article>
+      <!-- about info -->
+      <article class="about-info">
+        <!-- section title -->
+        <div class="section-title about-title">
+          <h2>about</h2>
+          <div class="underline"></div>
+        </div>
+        <!-- section title -->
+        <!-- lorem 40 -->
+        <p>
+          {{profile.bio}}
+        </p>
+
+        <a href="mailto:{{profile.email}}" class="btn hero-btn">hire me</a>
+      </article>
+    </div>
+  </section>
+  <!-- end of about about -->
+  <!-- services -->
+  <section class="section bg-grey" id="skills">
+    <div class="section-title">
+      <h2>Skills</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="section-center services-center">
+
+      {% for skill in skills %}
+      <div>
+        <div class="service">
+          {% comment %} <i class="fas fa-code service-icon"></i> {% endcomment %}
+          <i class="fa-solid fa-laptop-code service-icon"></i>
+          <h4>{{skill.name}}</h4>
+          <div class="underline"></div>
+          <p>
+            {{skill.description}}
+          </p>
+        </div>
+
+      </div>
+      {% endfor %}
+
+    </div>
+  </section>
+  <!-- end of services -->
+
+  <!-- blog -->
+  <section class="section blog" id="projects">
+    <div class="section-title">
+      <h2>PROJECTS</h2>
+      <div class="underline"></div>
+    </div>
+    <!-- blog center -->
+    <div class="section-center blog-center">
+      <!-- single article -->
+      {% for project in projects %}
+      <article>
+        <div class="card">
+          <!-- card front -->
+          <div class="card-side card-front">
+            <img src="{{project.imageURL}}" alt="" />
+            <div class="card-info">
+              <h4>{{project.title}}</h4>
+              <p>
+                {{project.description|slice:"250"}}
+              </p>
+
+            </div>
+          </div>
+          <!-- card back -->
+          <div class="card-side card-back">
+
+            <a href="{{project.demo_link}}" class="social-icon">
+              <i class="fa fa-laptop-code"></i>
+            </a>
+            <a href="{{project.source_link}}" class="social-icon">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+      <!-- end of single article -->
+      <!-- single article -->
+    </div>
+  </section>
+  <!-- end of blog -->
+  <!-- connect -->
+  <section class="connect" id="contact">
+
+    <div class="video-banner">
+      <div class="section-title">
+        <h2>let's get in touch</h2>
+        <div class="underline"></div>
+      </div>
+      <p class="video-text">
+        Want to hire me! Or you have some work for me! or any way in which --> I can help you then contact!
+      </p>
+      <a href="mailto:{{profile.email}}" class="btn hero-btn">Contact Me !</a>
+    </div>
+  </section>
+  <!-- end of connect -->
+  <footer class="footer">
+    <br>
+    <p>Made using Portfolio maker made By-</p>
+    <p>&copy; <span id="date"></span> Kshitiz Munjal</p>
+  </footer>
+
+</body>
+<script src="{% static 'js/portfolio.js' %}"></script>
+
+
+</html>

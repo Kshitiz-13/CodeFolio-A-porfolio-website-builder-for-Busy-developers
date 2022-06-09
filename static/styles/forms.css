@@ -1,0 +1,20 @@
+.auth,
+.project-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(to right, #f7797d, #fbd786, #c6ffdd);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* .auth {
+  height: 100vh;
+} */
+.auth-card,
+.project-form-card {
+  background: #1c68f500;
+  margin: 1rem;
+  border-radius: 3rem;
+}

@@ -1,0 +1,46 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+
+<!-- Main Section -->
+<main class="home">
+  <section class="header">
+    <div class="left-header">
+
+      <h1 class="header-text">HELLO AND WELCOME TO PORTFOLIO MAKER !!
+        <br>create a professional-grade
+        portfolio website within a few clicks !!</h1>
+
+    </div>
+    <div class="right-header">
+      <img src="{% static 'images/Untitled.png' %}" alt="">
+
+    </div>
+  </section>
+  <section class="info">
+    <div class="left-header">
+
+      <h1 class="header-text left-info">How to get started ?</h1>
+
+    </div>
+    <div class="right-info">
+      <ul>
+        <li>All you have to do is sign up and upload your projects. You will provide information
+          like contact info, a bio and your skills. You even have the ability for potential employers or recruiters to
+          email you directly from your portfolio!</li>
+        <br>
+        <li>Setting up a functioning portfolio can be stressful. That’s why we went ahead and did the work for you.
+          After you're done completing your resume, just click submit and it’s ready to go! All you do now is share your
+          link with whoever you like. You can also update your information as often as you need.</li>
+
+      </ul>
+    </div>
+
+    {% comment %} <div class="right-info">
+      <ul>
+        <li> I am working on more features so that user can customize more !!</li>
+        <br>
+
+    </div> {% endcomment %}
+  </section>
+</main>
+
+{% endblock content %}
