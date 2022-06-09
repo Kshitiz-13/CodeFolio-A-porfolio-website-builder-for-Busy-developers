@@ -7,6 +7,10 @@
 
 ## Setting up a functioning portfolio can be stressful. That’s why we went ahead and did the work for you. After you're done completing your resume, just click submit and it’s ready to go! All you do now is share your link with whoever you like. You can also update your information as often as you need.
 
+## Have a look in this video of it's working->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MuhsbDKnZvs?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # LANDING PAGE
 ![image](https://user-images.githubusercontent.com/55119355/172821809-a3f56e13-2a38-4960-85c0-9f7997087b41.png)
 
